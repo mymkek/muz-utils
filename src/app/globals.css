@@ -1,42 +1,30 @@
+/* styles/globals.css */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-primary: #4caf50;
+  --color-secondary: #ff9800;
+  --color-background: #000613;
+  --color-text: #000000;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --color-primary-dark: #357a38;
+  --color-secondary-dark: #c66900;
+  --color-background-dark: #121212;
+  --color-text-dark: #ffffff;
+  --border-radius: 16px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Темная тема */
+[data-theme='dark'] {
+  --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-background: var(--color-background-dark);
+  --color-text: var(--color-text-dark);
 }
